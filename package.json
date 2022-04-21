@@ -1,0 +1,26 @@
+{
+  "name": "spring_near_nft_minte",
+  "version": "1.0.0",
+  "scripts": {
+    "build-run-client": "parcel src/index.html",
+    "build-client": "parcel build src/index.html --public-url .",
+    "build-contract": "cd contracts && cargo build --target wasm32-unknown-unknown --release",
+    "deploy-contract": "npm run build-contract && near dev-deploy --wasmFile contracts/target/wasm32-unknown-unknown/release/spring_near_nft_minter.wasm",
+    "contract": "npm run build-contract && rd /s /q neardev && near dev-deploy --wasmFile contracts/target/wasm32-unknown-unknown/release/spring_near_nft_minter.wasm"
+  },
+  "author": "@ligebit",
+  "license": "ISC",
+  "dependencies": {
+    "ipfs-car": "^0.7.0",
+    "near-api-js": "^0.44.2",
+    "nft.storage": "^6.2.0",
+    "parcel": "^2.4.1",
+    "web3.storage": "^4.2.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "process": "^0.11.10"
+  },
+  "main": "index.js",
+  "description": ""
+}
