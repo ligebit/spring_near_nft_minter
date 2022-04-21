@@ -1,8 +1,10 @@
 node_modules
 package-lock.json
+package.json
 .parcel-cache
 neardev
 dist
-contracts/target
-contracts/Cargo.lock
 .vscode
+src
+contracts
+.gitignore
