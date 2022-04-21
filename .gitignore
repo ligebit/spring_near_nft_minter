@@ -1,3 +1,4 @@
+contracts
 node_modules
 package-lock.json
 package.json
@@ -6,5 +7,4 @@ neardev
 dist
 .vscode
 src
-contracts
 .gitignore
